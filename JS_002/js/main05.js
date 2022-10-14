@@ -21,14 +21,8 @@ btn.addEventListener("click", () => {
   }
 
   const intNum = Number(txtNum);
-  if (intNum == "") {
-    alert("값을 입력하세요");
-    return;
-  }
-
   if (intNum <= 0) {
     alert("0 이상의 값을 입력하세요");
-    return;
   }
 
   if (intNum > 0) {
