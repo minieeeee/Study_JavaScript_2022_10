@@ -6,11 +6,30 @@
  *     비밀번호부터 다시 입력 받도록 하기
  */
 
-const username = document.querySelector("#username");
-const password = document.querySelector("#password");
-const repassword = document.querySelector("#repassword");
-const btn = document.querySelector("#btn");
+const inputname = document.querySelector("#username");
+const inputPass = document.querySelector("#password");
+const inputRepass = document.querySelector("#re_password");
+const btn = document.querySelector("button.btn_submit");
 
-btn.addEventListener("click",()=>{
-    const 
+btn?.addEventListener("click",()=>{
+    const txtName = inputname.value;
+    const txtPassword = inputPass.value;
+    const txtRepass = inputRepass.value;
+
+    if(!txtName){
+        alert("아이디를 입력하세요")
+        inputName.focus()
+        return false;
+    } else if(!txtPassword){
+        alert("비밀번호를 입력하세요")
+        inputPass.focus()
+        return false;
+    } else if(!txtRepass){
+        alert("비밀번호를 확인하세요")
+        inputRepass.focus()
+    } else if(txtPassword !== txtRepass){
+        alert("비밀번호를 다시 입력하세요")
+        inputPass.focus()
+    }
+
 })
