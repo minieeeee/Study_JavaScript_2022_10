@@ -4,19 +4,25 @@
  * 2. 화면의 UI를 각자 디자인
  */
 
-const tbodyAddr = document.querySelector("tbody.addr");
-const btn = document.querySelector("#button");
+const tableAddr = document.querySelector("table.addr");
+const btn = document.querySelector("button.btn");
+const inputs = document.querySelectorAll("input");
 
 btn?.addEventListener("click", () => {
-  const 이름 = [""];
-  for (let i = 0; i < 이름.length; i++) {
     const tr = document.createElement("TR");
 
     let td = document.createElement("TD")
-    td.innerText = 이름[i]
+    td.innerText = inputs[0].value;
     tr.appendChild(td);
 
-    
+    td = document.createElement("TD");
+    td.innerText = inputs[1].value;
+    tr.appendChild(td);
 
+    td = document.createElement("TD");
+    td.innerText = inputs[2].value;
+    tr.appendChild(td);
+
+    tableAddr.appendChild(tr);
 
 });

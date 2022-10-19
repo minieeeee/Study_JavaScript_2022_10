@@ -4,13 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        border: 1px solid rgb(57, 91, 185);
+        border-collapse: collapse;
+        width: 45%;
+      }
+
+      th , td{
+        border: 1px solid rgb(29, 66, 146);
+        padding: 3px;
+        text-align: center;
+      }
+
+
+    </style>    
   </head>
   <body>
     <div>
       <input name="name" placeholder="이름..." />
       <input name="addr" placeholder="주소..." />
       <input name="tel" placeholder="전화번호..." />
-      <button>추가</button>
+      <button class="btn">추가</button>
     </div>
     <table class="addr">
       <thead>
