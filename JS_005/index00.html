@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: green;
+        padding: 1.3em;
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
+      }
+      nav {
+        background-color:blue;
+        color: white;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        display: inline-block;
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+      
+      form {
+        width: 50%;
+        margin: 50px auto;
+
+
+      }
+
+    fieldset {
+        border: 3px solid rgb(44, 57, 240);
+        padding: 50px 10px;
+        text-align: center;
+        
+      }
+
+      form label,
+      form input {
+        /* inline tag인 label과 input을 inline-block으로 변경*/
+        display: inline-block;
+        margin: 5px;
+        padding: 8px;
+      }
+
+      form label {
+        width: 30%;
+        text-align: right;
+        color: blue;
+        font-weight: bold;
+      }
+
+
+      article {
+        width: 50%;
+        margin: 10px auto;
+      }
+
+
+      footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>검색엔진</h1>
+      <p>구글, 네이버, 다음 검색을 구현하다</p>
+    </header>
+    <nav class="main_nav">
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>구글</a></li>
+        <li><a>네이버</a></li>
+        <li><a>다음</a></li>
+        <li><a>About</a></li>
+      </ul>
+    </nav>
+    <form>
+        <fieldset>
+        <div>
+        <label>검색어</label>
+        <input name="search" placeholder="검색어를 입력하세요..." />
+        <button>검색</button>
+    </div>
+      </form>
+      
+    </article>
+    </section>
+</fieldset>
+    <footer>
+      <address>CopyRight &copy; oming4721@gmail.com</address>
+    </footer>
+  </body>
+  <script src="js/main00.js"></script>
+</html>
