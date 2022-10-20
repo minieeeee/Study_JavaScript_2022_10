@@ -14,8 +14,10 @@ const addrLoad = () => {
   console.table(addrList);
 
   if (!addrList) {
+    addrList = [];
     return false;
   }
+
   for (let i = 0; i < addrList.length; i++) {
     const tr = document.createElement("TR");
     let td = document.createElement("TD");
