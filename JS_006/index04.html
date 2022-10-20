@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      div.input_box input {
+        flex: 1;
+        padding: 8px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>나의 친구들</h1>
+    </header>
+    <div class="input box">
+      <input name="sc_name" type="text" placeholder="이름..." />
+      <input name="sc_addr" type="text" placeholder="주소..." />
+      <input name="sc_tel" type="number" placeholder="전화번호..." />
+      <button class="add">추가</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>주소</th>
+          <th>전화번호</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <script src="js/main04.js"></script>
+</html>
