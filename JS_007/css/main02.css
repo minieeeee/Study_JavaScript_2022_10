@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background-color: rgb(75, 250, 75);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    padding: 30px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+  }
+  section {
+    flex: 1;
+  }
+  table,
+  div {
+    width: 70%;
+    text-align: center;
+    margin: 20px auto;
+  }
+  table.addr th,
+  table.addr td {
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+  }
+  table.addr th {
+    background-color: rgb(224, 217, 217);
+    color: rgb(41, 41, 41);
+  }
+  div {
+    display: flex;
+    border: 1px solid #777;
+    padding: 8px;
+    flex-wrap: nowrap;
+  }
+  div.input_box input {
+    flex: 1;
+    padding: 6px 12px;
+    margin: 0.5em;
+    width: 10px;
+  }
+  button.add {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+  }
