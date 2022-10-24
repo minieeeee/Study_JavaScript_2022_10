@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        padding: 1.2rem;
+        text-align: center;
+        color: wheat;
+        text-shadow: 1px 1px 1px black;
+        background-image: url("images/bg_images_3.jpg");
+        background-size: 100% 100%;
+        background-position: bottom;
+      }
+
+      nav {
+        background-color: rgb(113, 141, 146);
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+      }
+
+      /*
+      nav 메뉴에 마우스가 hover 되면 하단에 두꺼운 line을 형성하여 보여주는 style
+      이때 hover에서 line을 주면 
+      마우스가 hover 되었을 때 메뉴 부분이 출렁거리는 현상이 나타난다
+      이 현상을 방지하기 위하여
+      기본 속성에 line의 굵기 만큼 transparent 색상으로 border-bottom을 설정해 준다
+      */
+      li {
+        margin: 8px;
+        padding: 10px 16px 8px 16px;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        font-weight: 900;
+        /* 
+        기본 속성에서 hover 속성으로 변화가 일어날 때 
+        delay를 주어 부드럽게 변화되도록 하는 기법
+        */
+        transition: border 0.7s, background-color 1s;
+      }
+
+      li:hover {
+        border-bottom: 3px solid rgb(252, 252, 135);
+        background-color: yellow;
+      }
+
+      footer {
+        background-color: #777;
+        font-size: 8px;
+        text-align: center;
+        padding: 0.9em;
+      }
+
+      section {
+        flex: 1;
+        /*
+        box 크기가 고정된 상태에서 내부의 content가 box의 크기보다 큰 경우
+        overflow를 지정하면 box 내부에서 content가 머물도록 할 수 있다
+        hidden: box 보다 넘치는 content를 잘라서 보이지 않게
+        scroll: 항상 scroll bar가 보이도록
+        auto: content가 넘치는 경우에만 scroll bar이 나타나도록
+        
+        overflow: width, height에 모두 적용
+        overflow-y: height에만 적용
+        overflow-x: width에만 적용
+        */
+        overflow: auto;
+        display: flex;
+      }
+
+      div {
+        margin: 10px;
+        overflow: auto;
+      }
+
+      div:nth-of-type(1),
+      div:nth-of-type(3) {
+        flex: 1;
+      }
+
+      div:nth-of-type(2) {
+        flex: 3;
+      }
+
+      img {
+        float: left;
+        /* top, right, bottom, left */
+        margin: 0 10px 10px 0;
+        border-radius: 15px;
+      }
+
+      div:nth-of-type(1) img {
+        /* box를 둥근 원으로 설정하기 */
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>반갑습니다</h1>
+      <p>나의 홈페이지에 오신 것을 환영합니다</p>
+    </header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>공지사항</li>
+        <li>자유게시판</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+      </ul>
+    </nav>
+    <section>
+      <div>
+        <img src="images/bg_images_2.jpg" width="100px" />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus quaerat
+        excepturi porro suscipit culpa autem, rerum, quasi quod possimus quidem
+        esse, nobis sequi ratione rem aliquid debitis ab cumque vero. Lorem
+        ipsum dolor sit, amet consectetur adipisicing elit. Natus quaerat
+        excepturi porro suscipit culpa autem, rerum, quasi quod possimus quidem
+        esse, nobis sequi ratione rem aliquid debitis ab cumque vero. Lorem
+        ipsum dolor sit, amet consectetur adipisicing elit. Natus quaerat
+        excepturi porro suscipit culpa autem, rerum, quasi quod possimus quidem
+        esse, nobis sequi ratione rem aliquid debitis ab cumque vero.
+      </div>
+      <div>
+        <img src="images/bg_images_1.jpg" width="200px" />
+        이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그
+        공무원이 최초로 선출 또는 임명된 때로부터 적용한다. 모든 국민은 신체의
+        자유를 가진다. 누구든지 법률에 의하지 아니하고는 체포·구속·압수·수색
+        또는 심문을 받지 아니하며, 법률과 적법한 절차에 의하지 아니하고는
+        처벌·보안처분 또는 강제노역을 받지 아니한다. 대통령은 국가의 독립·영토의
+        보전·국가의 계속성과 헌법을 수호할 책무를 진다. 근로자는 근로조건의
+        향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 모든
+        국민은 법률이 정하는 바에 의하여 국방의 의무를 진다. 정당의 설립은
+        자유이며, 복수정당제는 보장된다. 이 헌법중 공무원의 임기 또는 중임제한에
+        관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된
+        때로부터 적용한다. 모든 국민은 신체의 자유를 가진다. 누구든지 법률에
+        의하지 아니하고는 체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과
+        적법한 절차에 의하지 아니하고는 처벌·보안처분 또는 강제노역을 받지
+        아니한다. 대통령은 국가의 독립·영토의 보전·국가의 계속성과 헌법을 수호할
+        책무를 진다. 근로자는 근로조건의 향상을 위하여 자주적인
+        단결권·단체교섭권 및 단체행동권을 가진다. 모든 국민은 법률이 정하는 바에
+        의하여 국방의 의무를 진다. 정당의 설립은 자유이며, 복수정당제는
+        보장된다. 이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에
+        의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다. 모든
+        국민은 신체의 자유를 가진다. 누구든지 법률에 의하지 아니하고는
+        체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과 적법한 절차에
+        의하지 아니하고는 처벌·보안처분 또는 강제노역을 받지 아니한다. 대통령은
+        국가의 독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다.
+        근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및
+        단체행동권을 가진다. 모든 국민은 법률이 정하는 바에 의하여 국방의 의무를
+        진다. 정당의 설립은 자유이며, 복수정당제는 보장된다. 이 헌법중 공무원의
+        임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로
+        선출 또는 임명된 때로부터 적용한다. 모든 국민은 신체의 자유를 가진다.
+        누구든지 법률에 의하지 아니하고는 체포·구속·압수·수색 또는 심문을 받지
+        아니하며, 법률과 적법한 절차에 의하지 아니하고는 처벌·보안처분 또는
+        강제노역을 받지 아니한다. 대통령은 국가의 독립·영토의 보전·국가의
+        계속성과 헌법을 수호할 책무를 진다. 근로자는 근로조건의 향상을 위하여
+        자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 모든 국민은 법률이
+        정하는 바에 의하여 국방의 의무를 진다. 정당의 설립은 자유이며,
+        복수정당제는 보장된다.
+      </div>
+      <div>
+        국회에서 의결된 법률안은 정부에 이송되어 15일 이내에 대통령이 공포한다.
+        지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타
+        지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 헌법에 의하여
+        체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력을
+        가진다. 원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는 4년으로
+        하며, 1차에 한하여 중임할 수 있다. 감사원은 세입·세출의 결산을 매년
+        검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다. 누구든지 체포
+        또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지
+        아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의
+        가족등 법률이 정하는 자에게는 그 이유와 일시·장소가 지체없이 통지되어야
+        한다. 국회에서 의결된 법률안은 정부에 이송되어 15일 이내에 대통령이
+        공포한다. 지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법
+        기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 헌법에
+        의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은
+        효력을 가진다. 원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는
+        4년으로 하며, 1차에 한하여 중임할 수 있다. 감사원은 세입·세출의 결산을
+        매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다. 누구든지
+        체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지
+        아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의
+        가족등 법률이 정하는 자에게는 그 이유와 일시·장소가 지체없이 통지되어야
+        한다. 국회에서 의결된 법률안은 정부에 이송되어 15일 이내에 대통령이
+        공포한다. 지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법
+        기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 헌법에
+        의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은
+        효력을 가진다. 원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는
+        4년으로 하며, 1차에 한하여 중임할 수 있다. 감사원은 세입·세출의 결산을
+        매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다. 누구든지
+        체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지
+        아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의
+        가족등 법률이 정하는 자에게는 그 이유와 일시·장소가 지체없이 통지되어야
+        한다. 국회에서 의결된 법률안은 정부에 이송되어 15일 이내에 대통령이
+        공포한다. 지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법
+        기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 헌법에
+        의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은
+        효력을 가진다. 원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는
+        4년으로 하며, 1차에 한하여 중임할 수 있다. 감사원은 세입·세출의 결산을
+        매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다. 누구든지
+        체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지
+        아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의
+        가족등 법률이 정하는 자에게는 그 이유와 일시·장소가 지체없이 통지되어야
+        한다.
+      </div>
+    </section>
+    <footer>
+      <address>CopyRight &copy; oming4721@gmail.com</address>
+    </footer>
+  </body>
+</html>
