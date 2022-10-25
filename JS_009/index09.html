@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let num1 = 100;
+    let num2 = 200;
+    document.writeln(num1 + num2);
+
+    const init = () => {
+      let num1 = 200;
+      let num2 = 300;
+      document.writeln(num1 + num2);
+    };
+    init();
+
+    // IIFE(Immediaterly Invoked Function Expression)
+    // 즉시 실행 함수
+    // 스크립트가 시작될 때
+    // 최초의 단 한번만 실행하고 더이상 실행할 이유가 없는 함수 선언
+    // "즉시 실행(함수의 즉시 실행)"
+    // 이 함수는 이름이 없는 무명 함수이며 한번만 실행되고 소멸된다
+    // 메모리 leak(누수) 방지 = 필요없는 메모리 낭비 방지
+    (() => {
+      let num1 = 22;
+      let num2 = 33;
+      document.writeln(num1 + num2);
+    })();
+
+    (function () {
+      document.writeln("즉시 실행 함수");
+    })();
+  </script>
+</html>
